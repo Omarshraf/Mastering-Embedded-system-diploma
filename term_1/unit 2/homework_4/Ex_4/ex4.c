@@ -1,4 +1,4 @@
-/*
+/* C program to calculate the power of a number using recursion
  ============================================================================
  Name        : ex4.c
  Author      : Omar Ashraf
@@ -6,28 +6,6 @@
  Copyright   : Your copyright notice
  Description : Hello World in C, Ansi-style
  ============================================================================
- */
-/*
-#include <stdio.h>
-int i=1;
-int power(int n,int p){
-	if (p!=i){
-	i++;
-	power(n,p);
-	}
-	return n*n;
-}
-
-int main(void) {
-	int n, p;
-	pirntf("Enter base number: ");
-	fflush(stdin); fflush(stdout);
-	scanf("%d",&n);
-	pirntf("Enter power number (positive integer): ");
-	fflush(stdin); fflush(stdout);
-	scanf("%d",&p);
-	power(n,p);
-}
  */
 #include <stdio.h>
 
