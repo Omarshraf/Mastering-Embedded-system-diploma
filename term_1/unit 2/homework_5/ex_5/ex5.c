@@ -1,4 +1,5 @@
-/*
+/* C porgram to find area of a circle, passing argument to macros.
+ * [Area of circle = pi*r2]
  ============================================================================
  Name        : ex5.c
  Author      : Omar Ashraf
@@ -7,9 +8,6 @@
  Description : Hello World in C, Ansi-style
  ============================================================================
  */
-/*float circular_area(int r){\
-	float area = 2* 3.14*r;\
-	return area;}*/
 #include <stdio.h>
 #define circular_area(r) 3.14*r*r
 
