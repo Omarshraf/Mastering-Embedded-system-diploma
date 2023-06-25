@@ -121,18 +121,7 @@ void AddStudentFrom_txt(fifo_buf_t* student_fifo)
 
 	}
 	fclose(Pstudents_file);
-
-
-
 }
-
-
-
-
-
-
-
-
 
 
 
@@ -254,18 +243,21 @@ void FindStudentByName(fifo_buf_t* student_fifo){
 		if(!stricmp(temp->fname,name_to_search) || !stricmp(temp->lname,name_to_search))
 		{
 			print_student(temp);
-			if (student_fifo->tail == (student_fifo->base + student_fifo->lengtn -1))
-				student_fifo->tail = student_fifo->base;
+			if (temp == (student_fifo->base + student_fifo->lengtn -1)){
+				temp = student_fifo->base;
+				j++;
+			}
+			
 			else
-				student_fifo->tail++;
+				temp++;
 			j++;
 
 		}
 		else
-			if (student_fifo->tail == (student_fifo->base + student_fifo->lengtn -1))
-				student_fifo->tail = student_fifo->base;
+			if (temp == (student_fifo->base + student_fifo->lengtn -1))
+				temp = student_fifo->base;
 			else
-				student_fifo->tail++;
+				temp++;
 	}
 	if(j==0){
 		printf("\n==============================\n");
@@ -301,15 +293,20 @@ void FindStudentsRegisteredInCourse(fifo_buf_t* student_fifo)
 			if(temp->cid[j] == cid_to_search)
 			{
 				print_student(temp);
+				// to finish the cid loop
 				j=5;
 				k++;
+				if (temp == (student_fifo->base + student_fifo->lengtn -1))
+					temp = student_fifo->base;
+				else
+					temp++;
 			}
 		}
 		
-		if (student_fifo->tail == (student_fifo->base + student_fifo->lengtn -1))
-			student_fifo->tail = student_fifo->base;
+		if (temp == (student_fifo->base + student_fifo->lengtn -1))
+			temp = student_fifo->base;
 		else
-			student_fifo->tail++;
+			temp++;
 
 
 	}
@@ -409,6 +406,7 @@ void UpdateStudent(fifo_buf_t* student_fifo)
 			default:
 			{
 				printf("Error: Wrong choise\n");
+				return;
 			}
 			break;
 
@@ -446,11 +444,13 @@ void DeleteStudent(fifo_buf_t* student_fifo)
 	printf("Enter The Student ID to remove: ");
 	fflush(stdin); fflush(stdout);
 	scanf("%d",&ID);
+
 	for (int i = 0; i < student_fifo->count; ++i)
 	{
 		if (current->roll==ID)
 		{
 			*current=*next;
+			//To avoid the repetition in registration
 			for(int j = 0 ; j<student_fifo->count-(i+1);j++)
 			{
 				if (current==(student_fifo->base + student_fifo->lengtn - 1))
@@ -480,11 +480,8 @@ void DeleteStudent(fifo_buf_t* student_fifo)
 
 		}
 
-		
-
-
-
 	}
+//to return the structure of the fifo to it's current position 
 	if (student_fifo->tail == student_fifo->base )
 		student_fifo->tail = &buffer[49];
 
