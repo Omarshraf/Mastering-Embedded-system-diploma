@@ -234,7 +234,7 @@ void MCAL_EXTI_GPIO_Update(EXTI_GPIO_PinConfig_t* EXTI_CONFIG)
 
 
 //=======================================================================
-// 									 ISR Functions
+// 							 ISR Functions
 //=======================================================================
 
 void EXTI0_IRQHandler (void)
