@@ -1,5 +1,5 @@
 /*
- * Stm32_F103C12_gpio_driver.c
+ * Stm32_F103C6_gpio_driver.c
  *
  *  Created on: Jul 9, 2023
  *      Author: Omar
