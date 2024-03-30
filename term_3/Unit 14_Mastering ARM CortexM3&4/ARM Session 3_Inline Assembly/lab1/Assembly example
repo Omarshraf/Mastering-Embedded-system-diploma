@@ -1,0 +1,16 @@
+Reset
+			mov		R0, #5
+			bl		main
+			
+main
+			bl		subtract
+			b		termination
+			
+subtract
+			sub		R0, R0, #1
+			cmp		R0, #0
+			bne		subtract
+			;		bx is not supported here
+			mov		PC, LR
+			
+termination
