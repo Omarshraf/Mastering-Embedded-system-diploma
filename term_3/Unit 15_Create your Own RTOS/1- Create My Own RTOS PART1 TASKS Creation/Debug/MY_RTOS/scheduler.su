@@ -1,0 +1,8 @@
+scheduler.c:35:6:OS_SVC_Services	24	static
+scheduler.c:61:6:PendSV_Handler	4	static
+scheduler.c:67:5:OS_SVC_Set	16	static,ignoring_inline_asm
+scheduler.c:89:6:MY_RTOS_Create_MainStack	4	static
+scheduler.c:97:17:MY_RTOS_init	16	static
+scheduler.c:128:6:MY_RTOS_idel_Task	4	static,ignoring_inline_asm
+scheduler.c:136:6:MY_RTOS_Create_TaskStack	24	static
+scheduler.c:169:17:MY_RTOS_Creat_Task	24	static
