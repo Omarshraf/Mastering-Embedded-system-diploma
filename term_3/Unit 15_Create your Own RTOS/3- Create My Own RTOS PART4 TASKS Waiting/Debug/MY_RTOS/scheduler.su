@@ -1,0 +1,16 @@
+scheduler.c:44:28:PendSV_Handler	0	static,ignoring_inline_asm
+scheduler.c:106:6:MY_RTOS_Create_MainStack	4	static
+scheduler.c:114:17:MY_RTOS_init	16	static
+scheduler.c:146:6:MY_RTOS_idel_Task	4	static,ignoring_inline_asm
+scheduler.c:155:6:MY_RTOS_Create_TaskStack	24	static
+scheduler.c:188:17:MY_RTOS_Creat_Task	24	static
+scheduler.c:225:6:bubbleSort	24	static
+scheduler.c:245:6:MY_RTOS_Update_Scheduler_Table	24	static
+scheduler.c:304:6:Decide_whatNext	8	static
+scheduler.c:330:6:OS_SVC_Services	24	static
+scheduler.c:365:1:MY_RTOS_OS_SVC_Set	16	static,ignoring_inline_asm
+scheduler.c:385:6:MY_RTOS_ActivateTask	16	static
+scheduler.c:391:6:MY_RTOS_TerminateTask	16	static
+scheduler.c:397:6:MY_RTOS_TaskWait	16	static
+scheduler.c:410:6:MY_RTOS_STARTOS	8	static,ignoring_inline_asm
+scheduler.c:430:6:MY_RTOS_Update_TaskWaitingTime	16	static
